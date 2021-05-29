@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>To Do List</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .col-sm-4{
+            text-align: center;
+            border: 1px solid black;
+            padding: 10px;
+			background-color:#99ff99;
+        }
+		.asdf{
+		background-color:tomato;
+		}
+		.asdfg{
+		background-color:#ccc;
+    </style>
+</head>
+<body>
+        <h1>To Do List</h1>
+      </div>
+      
+      <div class="">
+        <div class="row">
+          <div class="col-sm-4 asdf">
+            <h3>Todo</h3>
+          </div>
+          <div class="col-sm-4">
+            <h3>In Progress</h3>
+          </div>
+          <div class="col-sm-4 asdfg">
+            <h3>Done</h3>
+          </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4 asdf">
+                <div id="progress">
+                    <h5>Naman</h5>
+                    <button onclick="vaccine_moveToInProgress()">In Progress</button>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div id="progress_1" style="visibility: hidden;">
+                    <h5>Naman</h5>
+                    <button onclick="vaccine_moveToDone()">Done</button>
+                </div>
+            </div>
+            <div class="col-sm-4 asdfg">
+                <h5 id="progress_2" style="visibility: hidden;">Naman</h5>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-4 asdf">
+                <div id="progress_3">
+                    <h5>Amit</h5>
+                    <button onclick="web_moveToInProgress()">In Progress</button>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div id="progress_4" style="visibility: hidden;">
+                    <h5>Amit</h5>
+                    <button onclick="web_moveToDone()">Done</button>
+                </div>
+            </div>
+            <div class="col-sm-4 asdfg">
+                <h5 id="web-done" style="visibility: hidden;">Amit</h5>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-4 asdf">
+                <div id="db-todo">
+                    <h5>Chinmay</h5>
+                    <button onclick="db_moveToInProgress()">In Progress</button>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div id="db-inprogress" style="visibility: hidden;">
+                    <h5>Chinmay</h5>
+                    <button onclick="db_moveToDone()">Done</button>
+                </div>
+            </div>
+            <div class="col-sm-4 asdfg">
+                <h5 id="db-done" style="visibility: hidden;">Chinmay</h5>
+            </div>
+          </div>
+      </div>
+      <script>function vaccine_moveToInProgress(){
+    var x = document.getElementById("progress");
+    x.style.visibility = 'hidden';
+    var y = document.getElementById("progress_1");
+    y.style.visibility = 'visible';
+}
+function vaccine_moveToDone(){
+    var x = document.getElementById("progress_1");
+    x.style.visibility = 'hidden';
+    var y = document.getElementById("progress_2");
+    y.style.visibility = 'visible';
+}
+function web_moveToInProgress(){
+    var x = document.getElementById("progress_3");
+    x.style.visibility = 'hidden';
+    var y = document.getElementById("progress_4");
+    y.style.visibility = 'visible';
+}
+function web_moveToDone(){
+    var x = document.getElementById("progress_4");
+    x.style.visibility = 'hidden';
+    var y = document.getElementById("web-done");
+    y.style.visibility = 'visible';
+}
+function db_moveToInProgress(){
+    var x = document.getElementById("db-todo");
+    x.style.visibility = 'hidden';
+    var y = document.getElementById("db-inprogress");
+    y.style.visibility = 'visible';
+}
+function db_moveToDone(){
+    var x = document.getElementById("db-inprogress");
+    x.style.visibility = 'hidden';
+    var y = document.getElementById("db-done");
+    y.style.visibility = 'visible';
+}</script>
+</body>
+</html>
